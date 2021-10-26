@@ -49,12 +49,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
+       <!--  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.2.1.RELEASE</version>
-        </dependency>
-    </dependencies>
+        </dependency>-->
+	</dependencies>
 
 	<build>
 		<plugins>
