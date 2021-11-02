@@ -15,8 +15,8 @@ import java.util.List;
 @Table(name = "icono")
 @Getter
 @Setter
-/*@SQLDelete(sql = "UPDATE icon SET deleted = true WHERE id=?")
-@Where(clause = "deleted=false")*/
+@SQLDelete(sql = "UPDATE icon SET deleted = true WHERE id=?")
+@Where(clause = "deleted=false") //Diferencia entre eliminados y no eliminados
 public class IconoEntity {
 
     @Id
@@ -34,6 +34,8 @@ public class IconoEntity {
     private Long altura;
 
     private String historia;
+
+    private boolean delete = Boolean.FALSE;
 
     @ManyToMany(mappedBy = "icons", cascade = CascadeType.ALL)
     private List<PaisEntity> paises = new ArrayList<>();
